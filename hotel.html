@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="hotel.css" />
+  </head>
+  <body>
+    <!-- <header class="header">
+      <div>
+        <img
+          class="logo"
+          src="images/istockphoto-1255861766-1024x1024-removebg-preview.png"
+          alt=""
+          href="#"
+        />
+      </div>
+      <div class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="car.html">Cars</a>
+        <a href="Hotel.html"> Hotels</a>
+        <a href="flight.html">Airport transfer</a>
+        <a href="#">Hajje&Omra</a>
+
+        <a class="active" href="#">Activities</a>
+      </div>
+      <div class="login">
+        <a href="#"><i class="fa-solid fa-user"></i> login</a>
+        <a href="#"> <i class="fa-solid fa-right-to-bracket"></i> sign up </a>
+      </div>
+    </header> -->
+    <!-- -----------------------------------------------       main Hotel---------------------------------------------------------------- -->
+    <section class="hotel-main">
+      <div class="background-container">
+        <div class="hotel-main-content">
+          <h1>Book Your Perfect Hotel Now!</h1>
+          <p>
+            Enjoy the best prices and exclusive deals. Easy booking and 24/7
+            support. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Minus, quisquam.
+          </p>
+
+          <span> Start your journey with us!</span>
+        </div>
+        <img
+          id="backgroundImage"
+          src="images2/photo_202.jpg"
+          alt="Background"
+        />
+      </div>
+
+      <div class="thumbnails">
+        <div>
+          <img
+            class="thumbnail"
+            src="images/bg1.jpg"
+            onmouseenter="changeBackground('images/bg1.jpg')"
+          />
+        </div>
+        <div>
+          <img
+            class="thumbnail"
+            src="images2/photo_202.jpg"
+            onmouseenter="changeBackground('images2/photo_202.jpg')"
+          />
+        </div>
+        <div>
+          <img
+            class="thumbnail"
+            src="images2/photo_2024-09-26_14-16-46.jpg"
+            onmouseenter="changeBackground('images2/photo_2024-09-26_14-16-46.jpg')"
+          />
+        </div>
+      </div>
+
+      <div class="hotel-main-content">
+        <h1>Book Your Perfect Hotel Now!</h1>
+
+        <p>
+          Enjoy the best prices and exclusive deals. Easy booking and 24/7
+          support Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Magnam, et.
+        </p>
+        <span>Start your journey with us!</span>
+      </div>
+<!-- ----------------------------------------------------------Form Search------------------------------------------------------ -->
+<section>     
+<div class="search-container">
+        <form class="search-form" id="search-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pickup-date"
+                >Check-in <i class="fa-solid fa-calendar-check"></i> :</label
+              >
+              <input type="date" id="pickup-date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="dropoff-date"
+                >Check-out <i class="fa-regular fa-calendar-check"></i> :</label
+              >
+              <input type="date" id="dropoff-date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="rooms-adults"
+                >Rooms and adults <i class="fa-regular fa-user"></i> :</label
+              >
+              <select id="rooms-adults">
+                <option value="1 room, 1 adult">1 room, 1 adult</option>
+                <option value="1 room, 2 adults">1 room, 2 adults</option>
+                <option value="2 rooms, 2 adults">2 rooms, 2 adults</option>
+                <option value="2 rooms, 1 adult">2 rooms, 1 adult</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="find-hotel-button">Search</button>
+            </div>
+          </div>
+        </form>
+
+        <div
+          id="response-message"
+          style="margin-top: 20px; margin-bottom: 20px; color: green"
+        ></div>
+      </div>
+    </section>
+    
+    <section id="selected-hotel" style="display:none;">
+      <h2>Selected Hotel</h2>
+      <div id="hotel-info"></div>
+    </section>
+    
+    <!-- ------------------------------------------------------------Hotel carousel-------------------------------------------------------------------- -->
+    <section class="carousel">
+      <div class="container-caousel">
+        <div class="carousel-title">
+          <h2>Best Hotels in Egypt</h2>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <div class="card">
+              <img src="images2/photo2.jpg" alt="Hotel 1" />
+              <h2>Hilton Hotel</h2>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                perfect for a relaxing stay. Enjoy beautiful city views and
+                luxury amenities.
+              </p>
+              <div class="icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <i class="fa-regular fa-snowflake"></i>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <a href="hotel1.html">
+                <button class="card-btn-hotel">More Datilias</button></a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="images2/photo_22.jpg" alt="Hotel 1" />
+              <h2>Mövenpick Hotel</h2>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                perfect for a relaxing stay. Enjoy beautiful city views and
+                luxury amenities.
+              </p>
+              <div class="icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <i class="fa-regular fa-snowflake"></i>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <a href="hotel2.html">
+                <button class="card-btn-hotel">More Datilias</button></a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="images2/photo_202.jpg" alt="Hotel 1" />
+              <h2>Manor Hotel</h2>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                perfect for a relaxing stay. Enjoy beautiful city views and
+                luxury amenities.
+              </p>
+              <div class="icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <i class="fa-regular fa-snowflake"></i>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <a href="hotel3.html">
+                <button class="card-btn-hotel">More Datilias</button></a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="images2/photo_20.jpg" alt="Hotel 1" />
+              <h2>Deep Do Hotel</h2>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                perfect for a relaxing stay. Enjoy beautiful city views and
+                luxury amenities.
+              </p>
+              <div class="icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <i class="fa-regular fa-snowflake"></i>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <button class="card-btn-hotel">More Datilias</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="images2/photo3.jpg" alt="Hotel 1" />
+              <h2>Skyline Stay Hotel</h2>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                perfect for a relaxing stay. Enjoy beautiful city views and
+                luxury amenities.
+              </p>
+              <div class="icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <i class="fa-regular fa-snowflake"></i>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <button class="card-btn-hotel">More Datilias</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="images2/photo5.jpg" alt="Hotel 1" />
+              <h2>Ivy Hollow</h2>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                perfect for a relaxing stay. Enjoy beautiful city views and
+                luxury amenities.
+              </p>
+              <div class="icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <i class="fa-regular fa-snowflake"></i>
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <button class="card-btn-hotel">More Datilias</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">❮</button>
+      <button class="next" onclick="nextSlide()">❯</button>
+    </section>
+<!-- ---------------------------------------------------------------Hotels    Carousel--------------------------------------------------------------- -->
+    <section class="carousel">
+      <div class="carousel-title">
+        <h2 class="vip-hotels"><span>Cheaper </span>Hotels</h2>
+      </div>
+      <div class="carousel-inner" id="carousel-inner1">
+        <div class="carousel-item" id="carousel-item1 ">
+          <div class="card">
+            <img src="images2/photo2.jpg" alt="Hotel 1" />
+            <h2>Hilton Hotel</h2>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              perfect for a relaxing stay. Enjoy beautiful city views and luxury
+              amenities.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-bell-concierge"></i>
+              <i class="fa-regular fa-snowflake"></i>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <button class="card-btn-hotel">More Datilias</button>
+          </div>
+        </div>
+        <div class="carousel-item" id="carousel-item1 ">
+          <div class="card">
+            <img src="images2/photo_20.jpg" alt="Hotel 1" />
+            <h2>Mövenpick Hotel</h2>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              perfect for a relaxing stay. Enjoy beautiful city views and luxury
+              amenities.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-bell-concierge"></i>
+              <i class="fa-regular fa-snowflake"></i>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <button class="card-btn-hotel">More Datilias</button>
+          </div>
+        </div>
+        <div class="carousel-item" id="carousel-item1 ">
+          <div class="card">
+            <img src="images2/photo4.jpg" alt="Hotel 1" />
+            <h2>Manor Hotel</h2>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              perfect for a relaxing stay. Enjoy beautiful city views and luxury
+              amenities.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-bell-concierge"></i>
+              <i class="fa-regular fa-snowflake"></i>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <button class="card-btn-hotel">More Datilias</button>
+          </div>
+        </div>
+        <div class="carousel-item" id="carousel-item1 ">
+          <div class="card">
+            <img src="images2/photo_22.jpg" alt="Hotel 1" />
+            <h2>Deep Do Hotel</h2>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              perfect for a relaxing stay. Enjoy beautiful city views and luxury
+              amenities.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-bell-concierge"></i>
+              <i class="fa-regular fa-snowflake"></i>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <button class="card-btn-hotel">More Datilias</button>
+          </div>
+        </div>
+        <div class="carousel-item" id="carousel-item1 ">
+          <div class="card">
+            <img src="images2/photo_202.jpg" alt="Hotel 1" />
+            <h2>Skyline Stay Hotel</h2>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              perfect for a relaxing stay. Enjoy beautiful city views and luxury
+              amenities.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-bell-concierge"></i>
+              <i class="fa-regular fa-snowflake"></i>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <button class="card-btn-hotel">More Datilias</button>
+          </div>
+        </div>
+        <div class="carousel-item" id="carousel-item1 ">
+          <div class="card">
+            <img src="images2/photo3.jpg" alt="Hotel 1" />
+            <h2>Ivy Hollow</h2>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              perfect for a relaxing stay. Enjoy beautiful city views and luxury
+              amenities.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-bell-concierge"></i>
+              <i class="fa-regular fa-snowflake"></i>
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <button class="card-btn-hotel">More Datilias</button>
+          </div>
+        </div>
+      </div>
+      <button class="prev" onclick="prevSlide1()">❮</button>
+      <button class="next" onclick="nextSlide1()">❯</button>
+    </section>
+<!-- ------------------------------------------------------------Activities---------------------------------------------------------------------------- -->
+    <section class="acativities">
+      <div>
+        <h2>Activities</h2>
+      </div>
+      <div class="acativities-content">
+        <div class="activite1">
+          <img src="images2/a.jpeg" alt="photo" />
+          <h5>trips</h5>
+          <p>
+            Enjoy tourist trips to the most prominent landmarks of the city.
+          </p>
+        </div>
+        <div class="activite1">
+          <img src="images2/a2.jpeg" alt="" />
+          <h5>trips</h5>
+          <p>
+            Enjoy tourist trips to the most prominent landmarks of the city.
+          </p>
+        </div>
+        <div class="activite1">
+          <img src="images2/f.jpeg" alt="" />
+          <h5>trips</h5>
+          <p>
+            Enjoy tourist trips to the most prominent landmarks of the city.
+          </p>
+        </div>
+      </div>
+    </section>
+<!-- ------------------------------------------------Gallary---------------------------------------------------------------------------- -->
+    <section class="hotel-gallary">
+      <div class="container">
+        <div class="gallary-title"><h2>Gallary</h2></div>
+        <div class="gallery" id="gallery">
+          <div class="gallery-item">
+            <img src="images2/ga1.jpg" alt="" onclick="openModal(this)" />
+          </div>
+          <div class="gallery-item">
+            <img src="images2/ga2.jpg" alt="" onclick="openModal(this)" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/gl4.jpg" alt="" onclick="openModal(this)" />
+          </div>
+          <div class="gallery-item">
+            <img src="images2/ga3.jpg " onclick="openModal(this)" />
+          </div>
+          <div class="gallery-item">
+            <img src="images2/ga4.jpg" alt="" onclick="openModal(this)" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="images2/ga5.jpg" alt="" onclick="openModal(this)" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="images2/ga7.jpg" alt="" onclick="openModal(this)" />
+          </div>
+          <div class="gallery-item">
+            <img src="images2/ga8.jpg" alt="" onclick="openModal(this)" />
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- ---------------------------------------- Contact Us---------------------------------------------------------------------------------------- -->
+
+    <section class="Contact">
+      <h2>Contact Us</h2>
+      <div class="contact-us" id="contact-us">
+      <div class="ContactUs-Content">
+      <div>
+      <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="Enter Email">
+          
+          <label for="message">message:</label>
+          <textarea id="message" name="message"  required></textarea>
+          
+          <button type="submit">Send</button>
+      </form>
+  </div>
+      <div class="contact-us-img">
+          <img src="" alt="image">
+      </div>
+  </div>
+  
+  <div id="response-message"></div>
+</div>
+  </section>
+
+    <!-- /////////////////--------------------------------------   Footer   ----------------------------------------------------------------------- -->
+    <footer class="footer">
+      <section class="section-1">
+        <div>
+          <div class="logo-footer">
+            <button class="logo-button">
+              <a href="Home Page - Car Rental.html">
+                <img src="images/Logo Tap/car-placeholder.png" alt="" />
+                <span>Book a Hotel</span>
+              </a>
+            </button>
+            <p>Find the perfect Hotel for best stay with our website <br /></p>
+          </div>
+        </div>
+
+        <div class="news-letter">
+          <h2>Subscribe to our newsletter</h2>
+          <div class="input-footer">
+            <input type="email" id="email" name="email" required />
+            <label for="email" class="label">XXXXXX@gmail.com</label>
+          </div>
+          <button>Submit</button>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <hr />
+
+      <div class="pages-footer">
+        <div class="section-2-footer">
+          <h2>Get In Touch</h2>
+          <a href="tel:+20-127 147 0997"><h3>+20-127 147 0997</h3></a>
+          <a href="mailto:info@mr.car-rental.org"
+            ><h3>info@mr.car-rental.org</h3></a
+          >
+          <a href="https://maps.app.goo.gl/NU7jfnhfXSKfnMUy7" target="_blank"
+            ><h3>
+              <div id="section-2-footer-h3">
+                123 Ma'adi Kournesh Street, Ma'adi <br />
+                Cairo, Cairo, Egypt
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <hr />
+
+      <div class="end-footer">
+        <h6>
+          <strong>Copyright © Book Hotels </strong>
+          <a
+            href="https://www.linkedin.com/in/kyrillos-samy-38b110222/"
+            target="_blank"
+          >
+          </a>
+        </h6>
+      </div>
+    </footer>
+
+    <script src="hotel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  padding: 0 100px;
+  align-items: center;
+  position: fixed;
+  z-index: 99999999999991;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.logo {
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+
+  font-size: var(--p-font);
+  transition: 0.5s;
+}
+
+.navbar {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.navbar a {
+  float: left;
+  padding: 5px;
+
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navbar a:hover {
+  background-color: brown;
+}
+
+.login {
+  width: 200px;
+
+  padding: 12px;
+  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.login a {
+  text-decoration: none;
+  color: #ececec;
+  padding-right: 5px;
+  margin-right: 10px;
+}
+.login a i {
+  font-size: 20px;
+  color: brown;
+}
+
+@media (max-width: 480px) and (min-width: 100px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    font-size: 5px;
+  }
+
+  .hotel-main {
+    background-image: url(images2/photo_202.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    display: flex;
+  }
+
+  .logo {
+    opacity: 0;
+  }
+  .contact-us {
+    width: 200px;
+  }
+
+  .contact-us img {
+    opacity: 0;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+
+    /* محاذاة العناصر إلى اليسار */
+  }
+  .hotel-main {
+    background-image: url(images2/photo_202.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    display: flex;
+  }
+
+  .logo {
+    opacity: 0;
+  }
+  .contact-us {
+    width: 300px;
+  }
+  .contact-us img {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .header {
+    display: flex;
+  }
+  .hotel-main {
+    background-image: url(images2/photo_202.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin: 0;
+  }
+
+  .login {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+}
